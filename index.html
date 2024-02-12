@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.3/css/bootstrap.min.css"
+    integrity="sha512-oc9+XSs1H243/FRN9Rw62Fn8EtxjEYWHXRvjS43YtueEewbS6ObfXcJNyohjHqVKFPoXXUxwc+q1K7Dee6vv9g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />  <!--link to bootstrap files-->
+  <link rel="stylesheet" href="css/style.css"><!--link to css stylesheet-->
+  <title>Paper, Rock, Scissors</title><!--page title-->
+</head>
+
+<body>
+  <header>
+    <p>paper-rock-scissors</p><!--Header at the top of the page.-->
+  </header>
+
+  <div class="container"><!--container for entire page-->
+
+    <div class="row"><!--row to keep scoreBox and ChoiceBox next to each other-->
+      <div class="box" id="scoreBox"><!--box containg score-->
+        <h1><ins>Score</ins></h1>
+        <ul>
+          <li><label>You won</label><input name="winDisplay" type="text" size="8" id="winDisplay"></li>
+          <!--text display for winning message-->
+          <li> <label>You lost</label><input name="loseDisplay" type="text" size="8" id="loseDisplay"></li>
+          <!--text display for losing message-->
+          <li><label>You tied</label><input name="drawDisplay" type="text" size="8" id="drawDisplay"></li>
+          <!--text display for tieing message-->
+          <li><label>Out of</label><input name="gameDisplay" type="text" size="8" id="gameDisplay"></li>
+          <!--text display for games played message-->
+        </ul>
+
+        <div class="col-md-2">
+          <h1 class="result" id="win">You Win</h1><!--display box for win results-->
+          <h1 class="result" id="draw">Draw</h1><!--display box for lose results-->
+          <h1 class="result" id="lose">You Lose</h1><!--display box for tie results-->
+        </div>
+      </div><!--scoreBox-->
+
+      <div class="box col-md-8" id="choiceBox"><!--box containg choice buttons-->
+        <div class="container">
+          <h1><ins>Make your choice</ins></h1><!--instructions to make choice-->
+          <div class="row">
+            <button class="selection btn" id="paperBtn" name="paper" type="button" data-toggle="button"
+              aria-pressed="false" autocomplete="off">
+              <h2>Paper</h2>
+              <p>(Left Arrow)</p><img src="img/paper.gif" alt="" width="100">
+            </button><!--button to choose paper-->
+            <button class="selection btn" id="rockBtn" name="rock" type="button" data-toggle="button"
+              aria-pressed="false" autocomplete="off">
+              <h2>Rock</h2>
+              <p>(Up Arrow)</p><img src="img/rock.gif" alt="" width="100">
+            </button><!--button to choose rock-->
+            <button class="selection btn" id="scissorsBtn" name="scissors" type="button" data-toggle="button"
+              aria-pressed="false" autocomplete="off">
+              <h2>Scissors</h2>
+              <p>(Right Arrow)</p><img src="img/scissors.gif" alt="" width="100">
+            </button><!--button to choose scissors-->
+          </div><!--row-->
+
+          <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-7">
+              <button class="selection" id="playBtn" name="play" type="button" data-toggle="button" aria-pressed="false"
+                autocomplete="off">
+                <h1>PLAY</h1>
+                <p>(Enter)</p>
+              </button><!--play button-->
+            </div>
+            <div class="col-md-3"></div>
+          </div><!--row-->
+        </div><!--choiceBox-->
+      </div><!--row-->
+
+      <div class="box" id="playBox"><!--box containg playerChoice, cpuChoice, and match result-->
+        <div class="row">
+          <h1><ins>You:</ins></h1><!--text for playerChoice-->
+          <div class="col-md-2">
+            <div><img class="playerDisplay" id="playerPaperDisplay" src="img/paper.gif" alt="" width="220"></div>
+            <!--picture of paper choice-->
+            <div><img class="playerDisplay" id="playerRockDisplay" src="img/rock.gif" alt="" width="220"></div>
+            <!--picture of rock choice-->
+            <div><img class="playerDisplay" id="playerScissorsDisplay" src="img/scissors.gif" alt="" width="220"></div>
+            <!--picture of scissors choice-->
+          </div>
+          <div class="col-md-2"></div>
+          <h1><ins>Computer:</ins></h1><!--text for cpuChoice-->
+          <div class="col-md-2">
+            <div><img class="cpuDisplay" id="cpuPaperDisplay" src="img/paper.gif" alt="" width="220"></div>
+            <!--picture of paper choice-->
+            <div><img class="cpuDisplay" id="cpuRockDisplay" src="img/rock.gif" alt="" width="220"></div>
+            <!--picture of rock choice-->
+            <div><img class="cpuDisplay" id="cpuScissorsDisplay" src="img/scissors.gif" alt="" width="220"></div>
+            <!--picture of scissors choice-->
+          </div>
+        </div><!--row-->
+      </div><!--playBox-->
+
+    </div><!--container-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"
+      integrity="sha512-M+qMI1PHRcYcOpJzeJlaWbVVx2JJyPIwZas8or7dc97LZOokjvbpfRxymhVtlJLyjiF3wGyr0FJOA4DLONLVLw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"
+      integrity="sha512-TPh2Oxlg1zp+kz3nFA0C5vVC6leG/6mm1z9+mA81MI5eaUVqasPLO8Cuk4gMF4gUfP5etR73rgU/8PNMsSesoQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.3/js/bootstrap.min.js"
+      integrity="sha512-8qmis31OQi6hIRgvkht0s6mCOittjMa9GMqtK9hes5iEQBQE/Ca6yGE5FsW36vyipGoWQswBj/QBm2JR086Rkw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/scripts.js"></script><!--link to javaScript files-->
+</body>
+
+</html>

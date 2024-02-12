@@ -1,0 +1,97 @@
+*{ /* adds a margin to the entire page */
+    margin: 5px;
+   }
+
+body {
+    min-width: 300px;
+    color: rgb(108, 108, 120);
+    background-color: rgb(252, 252, 252);
+}
+
+header { /* color and alignment settings for the header */
+    background: rgb(188, 214, 252);
+    color: rgb(108, 108, 120);
+    font-size: 60px;
+    text-transform: uppercase;
+    text-align: center;
+   }
+
+.box  { /*creates class to put border around elements*/
+    border: solid 4px  rgb(108, 108, 120);
+    padding: 30px;
+}
+
+#scoreBox { /*sets the width of the score box*/
+    text-align: center;
+    max-width: 290px;
+    min-width: 290px;
+}
+
+#choiceBox {
+    text-align: center;
+}
+
+#playBox { /* sets the size of the playing field*/
+    text-align: center;
+    min-height: 245px;
+    width: 93%;
+}
+
+.playerDisplay, .cpuDisplay { /* creates background color for selectins to add contrast */
+    background: rgb(237, 237, 237);
+    border: solid 3px rgb(188, 214, 252);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+button { /* sets the size and spacing for the buttons*/
+    color: rgb(108, 108, 120);
+    min-width: 100px;
+    margin: 30px;
+   }
+
+#playBtn {
+    width: 250px;
+    border: solid 3px rgb(188, 214, 252);
+    border-radius: 20px;
+    color: rgb(108, 108, 120);
+}
+
+.selection:hover { /* sets a hover effect*/
+      background-color: rgb(188, 214, 252);
+   }
+
+.selection:active { /*sets an effect while clicking the button*/
+    background-color: rgb(29, 48, 125);
+ }
+
+ .result { /*sets size of box around result display */
+     width: 200px;
+     border: solid;
+     padding: 10px;
+ }
+
+.result { /*centers result inside of box */
+    margin: auto;
+    position: relative;
+    top: 20px;
+}
+
+ #win { /* sets the winning color to green */
+     color: green;
+     text-align: center;
+ }
+
+ #lose { /*sets the losing color to red */
+     color: red;
+     text-align: center;
+ }
+
+ #draw { /*set the tieing color to yellow */
+     color: orange;
+     text-align: center;
+ }
+
+ ul {
+     list-style: none;
+ }
